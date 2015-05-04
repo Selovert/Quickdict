@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SearchBarController" customModule="Quickdict" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBarWindow" destination="ezU-tI-HGt" id="dDh-b3-OTH"/>
+                <outlet property="searchField" destination="S09-Vf-8jh" id="WWL-2V-1dN"/>
+                <outlet property="vibrantView" destination="Ie8-u3-g0s" id="tTd-3C-P5V"/>
+                <outlet property="window" destination="ezU-tI-HGt" id="Q07-ke-2fu"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Search Window" allowsToolTipsWhenApplicationIsInactive="NO" restorable="NO" hidesOnDeactivate="YES" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="ezU-tI-HGt" customClass="SearchBarWindow" customModule="Quickdict" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <rect key="contentRect" x="1876" y="82" width="500" height="55"/>
+            <rect key="screenRect" x="1680" y="-30" width="1920" height="1057"/>
+            <view key="contentView" id="IAC-1x-7dr">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <point key="canvasLocation" x="468" y="187"/>
+        </window>
+        <visualEffectView appearanceType="aqua" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" id="Ie8-u3-g0s">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField focusRingType="none" verticalHuggingPriority="750" id="S09-Vf-8jh">
+                    <rect key="frame" x="50" y="6" width="450" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" focusRingType="none" placeholderString="Dict.cc Search" drawsBackground="YES" id="P3s-jA-oHV">
+                        <font key="font" size="30" name="HelveticaNeue-Thin"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="search:" target="-2" id="krL-zc-IHE"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="B9v-vg-oI5">
+                    <rect key="frame" x="10" y="7" width="38" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="d" id="d6T-tB-TG6">
+                        <font key="font" size="40" name="Verdana-BoldItalic"/>
+                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="304" y="-101.5"/>
+        </visualEffectView>
+    </objects>
+</document>
