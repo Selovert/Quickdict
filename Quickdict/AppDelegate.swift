@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var hotkeyPopoverController: HotkeyPopoverController!
     var searchBarController: SearchBarController!
     var aboutWindowController: AboutWindowController!
+    var webViewWindowController: WebViewController!
     var globals: Globals!
     var dict: Dict!
 

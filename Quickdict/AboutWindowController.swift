@@ -17,7 +17,6 @@ class AboutWindowController: NSWindowController, NSWindowDelegate {
     
     override func windowDidLoad() {
         
-        aboutWindow.delegate = self
         super.windowDidLoad()
     }
     
@@ -30,6 +29,7 @@ class AboutWindowController: NSWindowController, NSWindowDelegate {
         self.centerWindow()
         versionLabel.stringValue = "Version: \(version)"
         self.showWindow(self)
+        aboutWindow.delegate = self
         NSApp.activateIgnoringOtherApps(true)
         aboutWindow.makeKeyAndOrderFront(self)
     }

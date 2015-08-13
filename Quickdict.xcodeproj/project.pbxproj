@@ -12,6 +12,10 @@
 		470B59391AB7050800BC2705 /* SearchBarWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470B59381AB7050800BC2705 /* SearchBarWindow.swift */; };
 		475CF86E1AF7B218004C8373 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CF86D1AF7B218004C8373 /* AboutWindowController.swift */; };
 		475CF8701AF7B22A004C8373 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475CF86F1AF7B22A004C8373 /* AboutWindow.xib */; };
+		4764E16D1B7C92FA00C2BE42 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4764E16B1B7C92FA00C2BE42 /* WebViewController.swift */; };
+		4764E16E1B7C92FA00C2BE42 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4764E16C1B7C92FA00C2BE42 /* WebViewController.xib */; };
+		4764E1701B7C98F200C2BE42 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4764E16F1B7C98F200C2BE42 /* WebKit.framework */; };
+		4764E1721B7CC04500C2BE42 /* sanitize-page.js in Resources */ = {isa = PBXBuildFile; fileRef = 4764E1711B7CC04500C2BE42 /* sanitize-page.js */; };
 		4769E7071AB4DBB500EE0D8D /* HotkeyPopoverController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4769E7051AB4DBB500EE0D8D /* HotkeyPopoverController.xib */; };
 		476B32051ABB0FAD003D2E8D /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B32041ABB0FAD003D2E8D /* Dict.swift */; };
 		477E0D5A1AB23E9B00C13DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E0D591AB23E9B00C13DA5 /* AppDelegate.swift */; };
@@ -42,6 +46,10 @@
 		470B59381AB7050800BC2705 /* SearchBarWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarWindow.swift; sourceTree = "<group>"; };
 		475CF86D1AF7B218004C8373 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		475CF86F1AF7B22A004C8373 /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
+		4764E16B1B7C92FA00C2BE42 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		4764E16C1B7C92FA00C2BE42 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		4764E16F1B7C98F200C2BE42 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4764E1711B7CC04500C2BE42 /* sanitize-page.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "sanitize-page.js"; sourceTree = "<group>"; };
 		4769E6FD1AB4BB3100EE0D8D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Quickdict/Bridging-Header.h"; sourceTree = "<group>"; };
 		4769E7051AB4DBB500EE0D8D /* HotkeyPopoverController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotkeyPopoverController.xib; sourceTree = "<group>"; };
 		476B32041ABB0FAD003D2E8D /* Dict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4764E1701B7C98F200C2BE42 /* WebKit.framework in Frameworks */,
 				9174B5AA58BCE761B7A9B6D7 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,11 +133,13 @@
 				470B59381AB7050800BC2705 /* SearchBarWindow.swift */,
 				477E0D781AB3533E00C13DA5 /* ServicesDelegate.swift */,
 				477E0D741AB2476900C13DA5 /* StatusItemDelegate.swift */,
+				4764E16B1B7C92FA00C2BE42 /* WebViewController.swift */,
 				477E0D5B1AB23E9B00C13DA5 /* Images.xcassets */,
 				475CF86F1AF7B22A004C8373 /* AboutWindow.xib */,
 				477E0D5D1AB23E9B00C13DA5 /* MainMenu.xib */,
 				4769E7051AB4DBB500EE0D8D /* HotkeyPopoverController.xib */,
 				470B59351AB6F3F200BC2705 /* SearchBar.xib */,
+				4764E16C1B7C92FA00C2BE42 /* WebViewController.xib */,
 				477E0D571AB23E9B00C13DA5 /* Supporting Files */,
 			);
 			path = Quickdict;
@@ -139,6 +150,7 @@
 			children = (
 				477E0D581AB23E9B00C13DA5 /* Info.plist */,
 				479ECC8B1ABC1547001B6AF5 /* parseHTML.js */,
+				4764E1711B7CC04500C2BE42 /* sanitize-page.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,6 +175,7 @@
 		C48C4076E03ABF688AE855C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4764E16F1B7C98F200C2BE42 /* WebKit.framework */,
 				8DEBF9906266B2BB3F0196D6 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -254,6 +267,8 @@
 				4769E7071AB4DBB500EE0D8D /* HotkeyPopoverController.xib in Resources */,
 				477E0D5C1AB23E9B00C13DA5 /* Images.xcassets in Resources */,
 				479ECC8C1ABC1547001B6AF5 /* parseHTML.js in Resources */,
+				4764E16E1B7C92FA00C2BE42 /* WebViewController.xib in Resources */,
+				4764E1721B7CC04500C2BE42 /* sanitize-page.js in Resources */,
 				477E0D5F1AB23E9B00C13DA5 /* MainMenu.xib in Resources */,
 				470B59371AB6F3F200BC2705 /* SearchBar.xib in Resources */,
 				475CF8701AF7B22A004C8373 /* AboutWindow.xib in Resources */,
@@ -325,6 +340,7 @@
 				477E0D791AB3533E00C13DA5 /* ServicesDelegate.swift in Sources */,
 				470B59391AB7050800BC2705 /* SearchBarWindow.swift in Sources */,
 				470B59361AB6F3F200BC2705 /* SearchBarController.swift in Sources */,
+				4764E16D1B7C92FA00C2BE42 /* WebViewController.swift in Sources */,
 				476B32051ABB0FAD003D2E8D /* Dict.swift in Sources */,
 				477E0D5A1AB23E9B00C13DA5 /* AppDelegate.swift in Sources */,
 				47BA36551AB5A921002A11EB /* HotkeyPopoverController.swift in Sources */,

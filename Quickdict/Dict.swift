@@ -14,6 +14,9 @@ class Dict: NSObject {
     func beginRequest(searchQuery: String) {
         let (currentDisplay, currentSubdomain): (String, String) = delegate.globals.currentLanguage
         let url: NSURL! = NSURL(string: "http://\(currentSubdomain).dict.cc/?s=\(searchQuery)".stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-        NSWorkspace.sharedWorkspace().openURL(url)
+//        NSWorkspace.sharedWorkspace().openURL(url)
+        delegate.webViewWindowController = nil
+        delegate.webViewWindowController = WebViewController(windowNibName: "WebViewController")
+        delegate.webViewWindowController.reveal(url)
     }
 }
