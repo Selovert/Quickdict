@@ -31,6 +31,12 @@ class WebViewController: NSWindowController, NSWindowDelegate {
         webView = nil
     }
     
+    override func keyDown(theEvent: NSEvent) {
+        if theEvent.keyCode == 53 {
+            self.close()
+        }
+    }
+    
     func reveal(url: NSURL) {
         NSBundle.mainBundle().loadNibNamed("WebViewWindowController", owner: self, topLevelObjects: nil)
         self.showWindow(self)
